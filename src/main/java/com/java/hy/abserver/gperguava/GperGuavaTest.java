@@ -39,8 +39,6 @@ public class GperGuavaTest {
 
         TeacherGuava teacherGuava = new TeacherGuava("tom");
         TeacherGuava teacherGuava1 = new TeacherGuava("mic");
-        //TeacherGuava teacher = new TeacherGuava("tom",question,gperGuava);
-
 
         GperGuavaListener gperGuavaListener = new GperGuavaListener(question,gperGuava);
         EventBus eventBus = new EventBus("test");
@@ -48,9 +46,7 @@ public class GperGuavaTest {
         eventBus.register(gperGuavaListener);
 
         eventBus.post(teacherGuava);
-
-        eventBus.post(123);
-        //eventBus.post(teacherGuava1);
+        eventBus.post(teacherGuava1);
 
 
 
